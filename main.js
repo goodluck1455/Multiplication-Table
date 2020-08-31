@@ -1,4 +1,4 @@
-// alert("am working now");
+// Variables declarations goes here;
 let tableData = document.querySelector("table");
 let numberInput = document.querySelector("#number");
 let rangeInput = document.querySelector("#range");
@@ -23,7 +23,10 @@ addBtn.addEventListener("click", ()=> {
 
     let template = `
                  <tr>
-                       <td>${number} * ${i}</td>
+                       <td>${number}</td>
+                       <td> * </td>
+                       <td> ${i}</td>
+                       <td>  = </td>
                        <td>${result}</td>
                  </tr> `;
 
@@ -31,12 +34,12 @@ addBtn.addEventListener("click", ()=> {
                  text = `Congratulation you have successfully generated a ${number} times table`;
                  output.style.display = "block";
                 output.innerHTML = text;
-                }
-                
-                
                 
                 }
-
+                
+                
+                }
+                addBtn.disabled = true;
                 setInterval(refresh, 10000);
 
 });
